@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/movies', (req, res) => {
   knex('movies')
-  .select('title')
+  .select('*')
   .then(data => {
     res.status(200).send(data)
   })
